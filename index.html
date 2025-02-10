@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body
+    class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 min-h-screen px-4 font-[poppins]">
+    <nav class=" flex justify-between items-center">
+        <div class="logo  p-5 py-10 text-white font-bold text-3xl ">
+        <i class="fa-solid fa-cloud text-3xl ml-2">Tailwind</i>
+        </div>
+        <div class="menu_button md:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars text-white text-3xl mx-4"></i>
+        </div>
+        <ul class="hidden space-x-5 md:flex text-xl px-7 gap-3">
+            <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-home mr-2 hover:text-[#454545]"></i>Home</a></li>
+            <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-info-circle mr-2 hover:text-[#454545]"></i>About</a></li>
+            <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-cogs mr-2 hover:text-[#454545]"></i>Services</a></li>
+            <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-envelope mr-2 hover:text-[#454545]"></i>Contact</a></li>
+            <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-blog mr-2 hover:text-[#454545]"></i>Blog</a></li>
+        </ul>
+        <ul id="mobileMenu" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-10 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col text-3xl gap-10 items-center pt-20 backdrop-blur">
+        <li><a class="text-white hover:font-bold" href="#"><i class="fas fa-home mr-2"></i>Home</a></li>
+        <div class="absolute top-5 left-5 text-white text-3xl cursor-pointer" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+        <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-info-circle mr-2 hover:text-[#454545]"></i>About</a></li>
+        <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-cogs mr-2 hover:text-[#454545]"></i>Services</a></li>
+        <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-envelope mr-2 hover:text-[#454545]"></i>Contact</a></li>
+        <li><a class="text-white hover:font-bold hover:text-[#454545]" href="#"><i class="fas fa-blog mr-2 hover:text-[#454545]"></i>Blog</a></li>
+        </ul>
+        
+
+    </nav>
+    <section id="hero_Section" class="md:flex justify-between gap-7 md:p-5">
+    <div class="hero_img flex justify-center items-center md:flex-1 md:order-2 md:mt-4  ">
+        <img class="w-4/5 h-auto object-cover rounded-lg mt-2 border-4 border-white shadow-2xl shadow-black md:w-80 md:h-80 md:rounded-full  lg:w-96 lg:h-96"
+            src="assets/piclumen-first-01.webp" alt="image">
+    </div>
+    <section class="text-white mx-4 md:flex-1 ">
+        <h1 class="font-bold text-4xl mt-10 md:mt-16 ">Our Mission</h1>
+        <p class="text-lg  mt-5 md:mt-10">
+            Our mission is to empower individuals and organizations to achieve their full potential through innovative
+            and accessible technology solutions. We believe in the power of technology to transform lives, and we are
+            committed to developing cutting-edge solutions that are both powerful and easy to use. We strive to create a
+            positive impact on the world by fostering a culture of collaboration, creativity, and excellence. Our
+            ultimate goal is to make a meaningful difference in the lives of our users and the communities we serve.
+        </p>
+    </section>
+</section>
+   <form action="#" method="post" class="mt-8 flex flex-col justify-center items-center gap-3 md:flex-row md:items-center md:justify-start px-7">
+    <input type="text" placeholder="Enter City" class="border-2 border-black rounded-lg p-2 w-[85%] md:w-[300px]">
+    <button class="bg-violet-800 text-white p-2 rounded-lg w-[85%] hover:bg-violet-900 shadow shadow-2xl  xl shadow-black md:w-[100px]">Search</button>
+
+   </form>
+   <footer class=" flex flex-col justify-center items-center gap-2 m-10 border-t" >
+    <div class="flex justify-between items-center text-white text-sm mt-7 hover:text-black ">
+        &copy; 2025 WFA. All rights reserved.
+    </div>
+    <div class="flex justify-around items-center gap-5 text-3xl">
+        <a class="text-white hover:text-gray " href="#"><i class="fab fa-facebook text-white hover:text-black"></i></a>
+        <a class="text-white hover:text-gray " href="#"><i class="fab fa-twitter text-white hover:text-black"></i></a>
+        <a class="text-white hover:text-gray " href="#"><i class="fab fa-instagram text-white hover:text-black"></i></a>
+        <a class="text-white hover:text-gray " href="#"><i class="fab fa-linkedin text-white hover:text-black"></i></a>
+    </div>
+   </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
+            menu.classList.toggle('translate-x-0');
+        }
+    </script>
+</body>
+
+</html>
